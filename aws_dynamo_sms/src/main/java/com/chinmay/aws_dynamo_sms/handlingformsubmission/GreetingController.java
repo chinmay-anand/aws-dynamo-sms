@@ -27,17 +27,19 @@ public class GreetingController {
 	@GetMapping("/")
 	public String greetingFrom(Model model) {
 		model.addAttribute("greeting", new Greeting());
-		return "A lot of Greetings";
+		return "Greetings from Chinmay";
 	}
 	
 	@PostMapping("/greeting")
 	public String greetingSubmit(@ModelAttribute Greeting greeting) {
 		
 		//Persist submitted data into DynamoDB table using the enhanced client
-		//dde
+		dde.injectDynamoItem(greeting); 
 		
 		//Send a mobile notification
-		//msg.
+		String phNo = "+919885579819"; //Remove from here and pass from UI
+		msg.sendMessage(greeting.getId(), phNo);
+		
 		return "result";
 	}
 }
