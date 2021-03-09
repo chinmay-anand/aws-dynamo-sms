@@ -2,6 +2,9 @@
  * Copyright Chinmay Anand. All Rights Reserved.
  * A Java class that injects data into a DynamoDB table by using the DynamoDB enhanced client API.
  * @author Chinmay
+ * Detailed Functionality:
+ * Sets provision limit, defines a UI mapping record class, defines table schema attribute using the mapping record getters and setters, 
+ * Creates DynamoDbClient->DynamoDbEnhancedClient->get mapped table->PutItemEnhancedRequest->Finally put item record to database.
  *
  */
 
