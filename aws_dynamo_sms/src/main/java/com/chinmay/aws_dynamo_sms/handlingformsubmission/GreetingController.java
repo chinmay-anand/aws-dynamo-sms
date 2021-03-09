@@ -26,8 +26,12 @@ public class GreetingController {
 	
 	@GetMapping("/")
 	public String greetingFrom(Model model) {
-		model.addAttribute("greeting", new Greeting());
-		return "Greetings from Chinmay";
+		model.addAttribute("ui_greeting", new Greeting());
+		//The first parameter of Model.addAttribute in the controller class 
+		// is used in thymeleaf template for data transfer between view and controller.
+
+		//The thymeleaf template file chin_greeting.html will be served as indicated in the return value below 
+		return "chin_greeting"; //This is the thymeleaf template name without html extension 
 	}
 	
 	@PostMapping("/greeting")
@@ -37,9 +41,11 @@ public class GreetingController {
 		dde.injectDynamoItem(greeting); 
 		
 		//Send a mobile notification
-		String phNo = "+919885579819"; //Remove from here and pass from UI
+		String phNo = "+919885579819";
+		// TODO: Remove hard-coded phone number from here and pass it from properties or UI
 		msg.sendMessage(greeting.getId(), phNo);
 		
-		return "result";
+		//This is the thymeleaf template file (chin_result.html) that will be served as indicated in the return value below 
+		return "chin_result"; //This is the thymeleaf template name without html extension
 	}
 }

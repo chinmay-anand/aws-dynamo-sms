@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<!--  //The first parameter of Model.addAttribute in the controller class 
+		  // is used in thymeleaf template for data transfer between view and controller.
+	 -->  
+<h1>Result (from Chinmay)</h1>
+<p th:text="'id: ' + ${chin_greeting.id}" />
+<p th:text="'content: ' + ${chin_greeting.body}" />
+<a href="/greeting">Submit another message</a>
+</body>
+</html>

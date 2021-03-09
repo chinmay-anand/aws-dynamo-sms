@@ -107,7 +107,7 @@ public class DynamoDBEnhanced {
 			mappedTable.putItem(enReq);
 					
 		}catch (Exception e) {
-			// TODO: handle exception
+			// TODO: handle exception while inserting data to DynamoDB
 			e.getStackTrace();
 		}
 	}

@@ -13,6 +13,7 @@ public class Greeting {
 	private String body;
 	private String name;
 	private String title;
+	//We use exactly the same attribute names in the ui (chin_greeting.html) thymeleaf template
 	public String getId() {
 		return id;
 	}
