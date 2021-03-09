@@ -23,7 +23,7 @@ public class PublishTextSMS {
 	 * @param id - The id of the updated database record.
 	 * @param phoneNumber - The number where the confirmation sms will be sent.
 	 * Controller will call this method to send the confirmation message once data has
-	 * been inseeted into the database.
+	 * been inserted into the database.
 	 */
 	public void sendMessage(String id, String phoneNumber) {
 		String message = "A new item with ID value "+ id +" was added to the DynamoDB table";
