@@ -1,13 +1,5 @@
-package com.chinmay.aws_dynamo_sms.handlingformsubmission;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-
 /**
+ * Copyright Chinmay Anand. All Rights Reserved.
  * A Java class that represents the controller for this application.
  * It handles HTTP requests and returns a view. In this example note that 
  * notice the **@Autowired** annotation that creates a managed Spring bean. 
@@ -16,6 +8,15 @@ import org.springframework.web.bind.annotation.PostMapping;
  * @author Chinmay
  *
  */
+
+package com.chinmay.aws_dynamo_sms.handlingformsubmission;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class GreetingController {

@@ -1,3 +1,11 @@
+/**
+ * Copyright Chinmay Anand. All Rights Reserved.
+ * A Java class that sends a text message.
+ * @author Chinmay
+ *
+ */
+
+
 package com.chinmay.aws_dynamo_sms.handlingformsubmission;
 
 import org.springframework.stereotype.Component;
@@ -8,12 +16,6 @@ import software.amazon.awssdk.services.sns.SnsClient;
 import software.amazon.awssdk.services.sns.model.PublishRequest;
 import software.amazon.awssdk.services.sns.model.PublishResponse;
 import software.amazon.awssdk.services.sns.model.SnsException;
-
-/**
- * A Java class that sends a text message.
- * @author Chinmay
- *
- */
 
 @Component("PublishTextSMS")
 public class PublishTextSMS {
