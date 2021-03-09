@@ -19,9 +19,14 @@ import software.amazon.awssdk.services.sns.model.SnsException;
 
 @Component("PublishTextSMS")
 public class PublishTextSMS {
-	public void sendMessage(String id) {
+	/**
+	 * @param id - The id of the updated database record.
+	 * @param phoneNumber - The number where the confirmation sms will be sent.
+	 * Controller will call this method to send the confirmation message once data has
+	 * been inseeted into the database.
+	 */
+	public void sendMessage(String id, String phoneNumber) {
 		String message = "A new item with ID value "+ id +" was added to the DynamoDB table";
-		String phoneNumber="ENTER MOBILE NUMBER"; //Replace with a mobile phone number
 		Region region = Region.AP_SOUTH_1; //for Mumbai region
 
 		//SNS Client which will publish our request message
